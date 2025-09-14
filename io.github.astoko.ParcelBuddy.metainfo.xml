@@ -74,10 +74,9 @@
       <release version="0.1.2" date="2025-09-14">
       <url type="details">https://github.com/astoko/ParcelBuddy/compare/v0.1.1-alpha...v0.1.2-alpha</url>
       <description>
-        <p></p>
+        <p>Getting Close..</p>
         <ul>
-          <li>Flatpak File is now categorized as "Probably Safe" from "Potentianly Unsafe"</li>
-          <li>Flatpak is updated to follow better the requiremnets and guidelines of flathub for future submission.</li>
+          <li>Finilize Flatpak MetaInfo and Small Fixes..</li>
         </ul>
       </description>
     </release>
