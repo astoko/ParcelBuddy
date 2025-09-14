@@ -517,8 +517,8 @@ class ParcelWindow(Gtk.ApplicationWindow):
             application_name="Parcel Buddy",
             application_icon="share/hicolor/128x128/io.github.astoko.ParcelBuddy.png",
             developer_name="Astoko",
-            version="0.1.4",
-            comments="A simple app to track your parcels."
+            version="0.1.0",
+            comments="Parcel Buddy lets you track parcels from a wide range of carriers with a clean, visual interface. Get real-time updates and notifications for your packages, all in one place."
         )
         about.present()
         self.log_message("✅ 'About' window presented.")

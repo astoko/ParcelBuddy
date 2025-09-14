@@ -1,0 +1,29 @@
+name: 🚀 Release Drafter
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+  # (Optional) Needed only if you want autolabeling
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: read
+
+jobs:
+  update_release_draft:
+    permissions:
+      contents: write       # to create/update release drafts
+      pull-requests: write  # if you use autolabeler
+    runs-on: ubuntu-latest
+    steps:
+      - uses: release-drafter/release-drafter@v6
+        with:
+          # By default looks for `.github/release-drafter.yml`
+          # config-name: custom-release-drafter.yml
+          disable-autolabeler: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
