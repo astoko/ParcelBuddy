@@ -522,7 +522,7 @@ class ParcelWindow(Gtk.ApplicationWindow):
             license_type="GTK_LICENSE_AGPL_3_0",
             developers=["Astoko"],
             developer_name="Astoko",
-            version="0.1.0",
+            version="0.1.1",
             comments=(
                 "Parcel Buddy lets you track parcels from a wide range of carriers "
                 "with a clean, visual interface. Get real-time updates and notifications "
