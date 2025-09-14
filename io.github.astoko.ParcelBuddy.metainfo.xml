@@ -76,7 +76,7 @@
       <description>
         <p>Safer, Better Handeling to File Permissions</p>
         <ul>
-          <li>Flatpak File is now categorized as "Potentianly Safe" from "Potentianly Unsafe"</li>
+          <li>Flatpak File is now categorized as "Probably Safe" from "Potentianly Unsafe"</li>
           <li>Flatpak is updated to follow better the requiremnets and guidelines of flathub for future submission.</li>
         </ul>
       </description>
