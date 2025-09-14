@@ -26,7 +26,7 @@
       ],
       "build-commands": [
         "install -D main.py /app/main.py",
-        "install -D .env /app/.env",
+        "install -D .env /app/config/.env",
         "install -D parcelapp-wrapper.sh /app/bin/parcelapp",
         "chmod +x /app/bin/parcelapp",
         "install -D io.github.astoko.ParcelBuddy.desktop /app/share/applications/io.github.astoko.ParcelBuddy.desktop",

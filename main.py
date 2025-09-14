@@ -9,15 +9,24 @@ import threading
 import json
 import os
 import pprint
+import shutil
 import subprocess
 from datetime import datetime
 from dotenv import load_dotenv, dotenv_values 
 from gi.repository import Gtk, Adw, GLib, Gio, Pango, Gdk, GdkPixbuf
 import requests
 
+env_file = os.path.join(GLib.get_user_data_dir(),'.env')
+print(f"Loading environment from: {env_file}")
+base_env_file = "/app/config/.env"
+
+if not os.path.exists(env_file):
+    shutil.copy(base_env_file, env_file)
+
+load_dotenv(env_file)
+
 # ---------------- Tracker class ----------------
 class Tracker:
-    load_dotenv() 
     """Handles all API interactions for tracking."""
     CLIENT_ID = os.getenv("CLIENT_ID")
     CLIENT_SECRET = os.getenv("CLIENT_SECRET")
@@ -641,8 +650,7 @@ class ParcelWindow(Gtk.ApplicationWindow):
         self.default_url_check.connect("toggled", self._on_default_url_toggled)
         graphql_url_box.append(self.default_url_check)
 
-        GRAPHQL_URL = os.getenv("GRAPHQL_URL")
-        self.input_graphql_url.set_text(GRAPHQL_URL)
+        self.input_graphql_url.set_text("https://apis.tracker.delivery/graphql")
         self.input_graphql_url.set_editable(False)
         credentials_box.append(graphql_url_box)
         
@@ -733,7 +741,7 @@ class ParcelWindow(Gtk.ApplicationWindow):
         graphql_url = self.input_graphql_url.get_text().strip()
 
         # Save to .env
-        env_path = os.path.join(".env")
+        env_path = os.path.join(GLib.get_user_data_dir(),'.env')
         
         with open(env_path, "w") as f:
             f.write(f"CLIENT_ID={client_id}\n")
@@ -794,9 +802,9 @@ class ParcelWindow(Gtk.ApplicationWindow):
         if not client_id or not client_secret:
             self.onboarding_status_label.set_text("❌ Both fields are required.")
             return
-        
+        env_path = os.path.join(GLib.get_user_data_dir(),'.env')
         # Save to .env (simple overwrite)
-        with open(".env", "w") as f:
+        with open(env_path, "w") as f:
             f.write(f"CLIENT_ID={CLIENT_ID}\n")
             f.write(f"CLIENT_SECRET={CLIENT_SECRET}\n")
             f.write(f"GRAPHQL_URL={GRAPHQL_URL}\n")  # change if needed

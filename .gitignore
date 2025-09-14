@@ -210,3 +210,7 @@ build-dir
 repo
 .flatpak-builder/
 ParcelBuddy.flatpak
+.flatpak
+
+#vscode
+.vscode
