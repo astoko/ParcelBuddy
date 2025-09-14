@@ -76,7 +76,7 @@
 
   <releases>
     <release version="0.1.1" date="2025-09-14">
-      <url type="details">https://github.com/astoko/ParcelBuddy/commits/v0.1.1</url>
+      <url type="details">https://github.com/astoko/ParcelBuddy/compare/v0.1.0-alpha...v0.1.1-alpha</url>
       <description>
         <p>Safer, Better Handeling to File Permissions</p>
         <ul>
