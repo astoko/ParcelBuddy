@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Parcel Buddy
 Exec=parcelapp
-Icon=xyz.astoko.parcel_buddy
+Icon=io.github.astoko.ParcelBuddy
 Terminal=false
 Type=Application
 Categories=Utility;

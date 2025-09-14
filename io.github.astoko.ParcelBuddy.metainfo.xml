@@ -8,8 +8,8 @@
   <metadata_license>MIT</metadata_license>
   <project_license>MIT</project_license>
 
-  <url type="homepage">https://home.astoko.xyz</url>
-  <url type="contribute">https://home.astoko.xyz</url>
+  <url type="homepage">https://github.com/astoko/ParcelBuddy</url>
+  <url type="contribute">https://github.com/astoko/ParcelBuddy</url>
   <url type="contact">https://home.astoko.xyz</url>
   <developer_name>Astoko</developer_name>
 
@@ -41,19 +41,19 @@
 
   <screenshots>
     <screenshot>
-      <image>https://raw.githubusercontent.com/astoko/parcelapp/main/screenshots/overview.png</image>
+      <image>https://github.com/astoko/ParcelBuddy/blob/main/screenshots/overview.png?raw=true</image>
       <caption>Parcel Buddy Dashboard Overview</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/astoko/parcelapp/main/screenshots/integrates.png</image>
+      <image>https://github.com/astoko/ParcelBuddy/blob/main/screenshots/integrates.png?raw=true</image>
       <caption>Parcel Buddy Notification</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/astoko/parcelapp/main/screenshots/selfhostable.png</image>
+      <image>https://github.com/astoko/ParcelBuddy/blob/main/screenshots/selfhostable.png?raw=true</image>
       <caption>Parcel Buddy Self-hostable Solution</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/astoko/parcelapp/main/screenshots/timeline.png</image>
+      <image>https://github.com/astoko/ParcelBuddy/blob/main/screenshots/timeline.png?raw=true</image>
       <caption>Parcel Buddy Timeline Example</caption>
     </screenshot>
   </screenshots>
