@@ -5,8 +5,9 @@
   <icon type="stock">io.github.astoko.ParcelBuddy</icon>
   <summary>Track parcels easily from multiple carriers</summary>
 
-  <metadata_license>MIT</metadata_license>
-  <project_license>MIT</project_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>AGPL-3.0-or-later</project_license>
+
 
   <url type="homepage">https://github.com/astoko/ParcelBuddy</url>
   <url type="contribute">https://github.com/astoko/ParcelBuddy</url>
