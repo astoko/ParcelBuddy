@@ -517,7 +517,7 @@ class ParcelWindow(Gtk.ApplicationWindow):
             application_name="Parcel Buddy",
             application_icon="share/hicolor/128x128/io.github.astoko.ParcelBuddy.png",
             developer_name="Astoko",
-            version="1.3",
+            version="0.1.4",
             comments="A simple app to track your parcels."
         )
         about.present()
