@@ -818,9 +818,7 @@ class ParcelWindow(Gtk.ApplicationWindow):
             f.write(f"CLIENT_ID={CLIENT_ID}\n")
             f.write(f"CLIENT_SECRET={CLIENT_SECRET}\n")
             f.write(f"GRAPHQL_URL={GRAPHQL_URL}\n")  # change if needed
-        
-        # Test with example parcel number
-        from datetime import datetime
+    
         try:
             result = self.tracker.get_tracking_status("1234567890", "kr.cjlogistics")
             self.onboarding_status_label.set_text("✅ Credentials valid! Showing dashboard...")

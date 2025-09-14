@@ -6,6 +6,7 @@
   "command": "parcelapp",
   "finish-args": [
     "--socket=fallback-x11",
+    "--share=ipc",
     "--socket=wayland",
     "--share=network",
     "--persist=config",
@@ -16,11 +17,12 @@
       "name": "parcelapp",
       "buildsystem": "simple",
       "sources": [
-        {
-          "type": "dir",
-          "path": "."
-        }
-      ],
+          {
+            "type": "git",
+            "url": "https://github.com/astoko/ParcelBuddy.git",
+            "tag": "v0.1.1"
+          }
+        ],
       "build-commands": [
         "install -D main.py /app/main.py",
         "install -D .env /app/config/.env",
