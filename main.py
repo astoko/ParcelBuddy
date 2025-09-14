@@ -516,14 +516,19 @@ class ParcelWindow(Gtk.ApplicationWindow):
             transient_for=self,
             application_name="Parcel Buddy",
             application_icon="io.github.astoko.ParcelBuddy",
-            issue-url="https://github.com/astoko/ParcelBuddy/issues",
-            license-type=GTK_LICENSE_AGPL_3_0,
+            issue_url="https://github.com/astoko/ParcelBuddy/issues",
+            license_type="GTK_LICENSE_AGPL_3_0",
             developers=["Astoko"],
             developer_name="Astoko",
             version="0.1.0",
-            comments="Parcel Buddy lets you track parcels from a wide range of carriers with a clean, visual interface. Get real-time updates and notifications for your packages, all in one place."
+            comments=(
+                "Parcel Buddy lets you track parcels from a wide range of carriers "
+                "with a clean, visual interface. Get real-time updates and notifications "
+                "for your packages, all in one place."
+            )
         )
         about.present()
+
         self.log_message("✅ 'About' window presented.")
 
     def on_manual_refresh(self, _widget):
