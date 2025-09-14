@@ -1,8 +1,8 @@
 <component type="desktop-application">
-  <id>xyz.astoko.parcel_buddy</id>
+  <id>io.github.astoko.ParcelBuddy</id>
 
   <name>Parcel Buddy</name>
-  <icon type="stock">xyz.astoko.parcel_buddy</icon>
+  <icon type="stock">io.github.astoko.ParcelBuddy</icon>
   <summary>Track parcels easily from multiple carriers</summary>
 
   <metadata_license>MIT</metadata_license>
@@ -37,7 +37,7 @@
     </p>
   </description>
 
-  <launchable type="desktop-id">xyz.astoko.parcel_buddy.desktop</launchable>
+  <launchable type="desktop-id">io.github.astoko.ParcelBuddy.desktop</launchable>
 
   <screenshots>
     <screenshot>

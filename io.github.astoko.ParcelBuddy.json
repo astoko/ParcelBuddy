@@ -1,5 +1,5 @@
 {
-  "app-id": "xyz.astoko.parcel_buddy",
+  "app-id": "io.github.astoko.ParcelBuddy",
   "runtime": "org.gnome.Platform",
   "runtime-version": "48",
   "sdk": "org.gnome.Sdk",
@@ -29,8 +29,8 @@
         "install -D .env /app/.env",
         "install -D parcelapp-wrapper.sh /app/bin/parcelapp",
         "chmod +x /app/bin/parcelapp",
-        "install -D xyz.astoko.parcel_buddy.desktop /app/share/applications/xyz.astoko.parcel_buddy.desktop",
-        "install -D parcelapp.png /app/share/icons/hicolor/128x128/apps/xyz.astoko.parcel_buddy.png",
+        "install -D io.github.astoko.ParcelBuddy.desktop /app/share/applications/io.github.astoko.ParcelBuddy.desktop",
+        "install -D parcelapp.png /app/share/icons/hicolor/128x128/apps/io.github.astoko.ParcelBuddy.png",
         "install -D requirements.txt /app/requirements.txt",
         "mkdir -p /app/share/parcelapp/icons",
         "cp -r icons/* /app/share/parcelapp/icons/",
@@ -96,12 +96,12 @@
     "name": "appdata",
     "buildsystem": "simple",
     "build-commands": [
-      "install -D xyz.astoko.parcel_buddy.metainfo.xml /app/share/metainfo/xyz.astoko.parcel_buddy.metainfo.xml"
+      "install -D io.github.astoko.ParcelBuddy.metainfo.xml /app/share/metainfo/io.github.astoko.ParcelBuddy.metainfo.xml"
     ],
     "sources": [
       {
         "type": "file",
-        "path": "xyz.astoko.parcel_buddy.metainfo.xml"
+        "path": "io.github.astoko.ParcelBuddy.metainfo.xml"
       }
     ]
   }

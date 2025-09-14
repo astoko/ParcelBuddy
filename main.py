@@ -506,7 +506,7 @@ class ParcelWindow(Gtk.ApplicationWindow):
         about = Adw.AboutWindow(
             transient_for=self,
             application_name="Parcel Buddy",
-            application_icon="share/hicolor/128x128/io.github.you.ParcelApp.png",
+            application_icon="share/hicolor/128x128/io.github.astoko.ParcelBuddy.png",
             developer_name="Astoko",
             version="1.3",
             comments="A simple app to track your parcels."
@@ -610,7 +610,7 @@ class ParcelWindow(Gtk.ApplicationWindow):
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
         status_page = Adw.StatusPage(
-            icon_name="xyz.astoko.parcel_buddy",
+            icon_name="io.github.astoko.ParcelBuddy",
             title="Welcome to Parcel Buddy!",
             description="""To get started, please enter your API credentials from <a href="https://tracker.delivery/en/">tracker.delivery</a>."""
         )
@@ -1465,7 +1465,7 @@ class ParcelWindow(Gtk.ApplicationWindow):
 # ---------------- Application ----------------
 class ParcelApp(Adw.Application):
     def __init__(self, **kwargs): 
-        super().__init__(application_id="xyz.astoko.parcel_buddy", **kwargs)
+        super().__init__(application_id="io.github.astoko.ParcelBuddy", **kwargs)
         print("⚙️ Initializing ParcelApp...")
         
         # Set up icon theme paths
