@@ -16,14 +16,9 @@ from dotenv import load_dotenv, dotenv_values
 from gi.repository import Gtk, Adw, GLib, Gio, Pango, Gdk, GdkPixbuf
 import requests
 
-env_file = os.path.join(GLib.get_user_data_dir(),'.env')
-print(f"Loading environment from: {env_file}")
-base_env_file = "/app/config/.env"
+base_env_file = os.path.join('config','.env')
 
-if not os.path.exists(env_file):
-    shutil.copy(base_env_file, env_file)
-
-load_dotenv(env_file)
+load_dotenv(base_env_file)
 
 # ---------------- Tracker class ----------------
 class Tracker:
@@ -289,11 +284,18 @@ class Tracker:
             return iso_time
 
     def send_notification(self, title: str, message: str):
-        """Sends a desktop notification if the system supports it."""
         self.log(f"🔔 Sending desktop notification: '{title}' - '{message}'")
         try:
-            subprocess.run(["notify-send", "--app-name=Parcel Buddy", title, message])
-            self.log("✅ Notification sent successfully.")
+            
+            # Inside Flatpak – use Gio.Notification via XDG portal
+            app = Gio.Application.get_default()
+            if app is None:
+                app = Gio.Application.new("io.github.astoko.ParcelBuddy", 0)
+                    
+            notification = Gio.Notification.new(title)
+            notification.set_body(message)
+            app.send_notification("parcel-buddy", notification)
+            
         except Exception as e:
             GLib.idle_add(self.log, f"⚠️ Failed to send notification: {e}")
 
@@ -749,7 +751,7 @@ class ParcelWindow(Gtk.ApplicationWindow):
         graphql_url = self.input_graphql_url.get_text().strip()
 
         # Save to .env
-        env_path = os.path.join(GLib.get_user_data_dir(),'.env')
+        env_path = os.path.join('config','.env')
         
         with open(env_path, "w") as f:
             f.write(f"CLIENT_ID={client_id}\n")

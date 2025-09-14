@@ -19,6 +19,10 @@
 
 ## Installation
 
+### Flathub Installation
+
+Coming Soon... Hopefully
+
 ### Manual Flatpak Installation from Releases
 
 1. Go to the [Releases](https://github.com/your-username/parcelbuddy/releases) page.  
@@ -27,3 +31,10 @@
 
 ```bash
 flatpak install --user /path/to/ParcelBuddy.flatpak
+```
+4. Open the app, its should be installed and working.
+5. Go to https://tracker.delivery/ to obtain your API keys or optinally you can self-host the tracker and use it for your installation given you have docker.
+6. Input your newly obtained API keys and Test & Continue the Prompt.
+7. Congrats! You are now ready to use Parcel Buddy.
+
+***Reminder that the tracker.delivery has an limit of how many days the API keys are valid, This doesnt apply to the self-hosted version.***

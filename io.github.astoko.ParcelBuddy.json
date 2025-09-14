@@ -5,13 +5,10 @@
   "sdk": "org.gnome.Sdk",
   "command": "parcelapp",
   "finish-args": [
-    "--share=network",
-    "--share=ipc",
     "--socket=fallback-x11",
     "--socket=wayland",
-    "--device=dri",
-    "--filesystem=home",
-    "--socket=session-bus",
+    "--share=network",
+    "--persist=config",
     "--talk-name=org.freedesktop.Notifications"
   ],
   "modules": [
@@ -33,9 +30,7 @@
         "install -D parcelapp.png /app/share/icons/hicolor/128x128/apps/io.github.astoko.ParcelBuddy.png",
         "install -D requirements.txt /app/requirements.txt",
         "mkdir -p /app/share/parcelapp/icons",
-        "cp -r icons/* /app/share/parcelapp/icons/",
-        "mkdir -p /app/share/parcelapp/screenshots",
-        "cp -r screenshots/* /app/share/parcelapp/screenshots/"
+        "cp -r icons/* /app/share/parcelapp/icons/"
     ]
 
     },

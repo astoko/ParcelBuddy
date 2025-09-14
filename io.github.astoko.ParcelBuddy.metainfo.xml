@@ -8,11 +8,16 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>AGPL-3.0-or-later</project_license>
 
-
   <url type="homepage">https://github.com/astoko/ParcelBuddy</url>
   <url type="contribute">https://github.com/astoko/ParcelBuddy</url>
   <url type="contact">https://home.astoko.xyz</url>
-  <developer_name>Astoko</developer_name>
+
+  <developer id="io.github.astoko">
+    <name>astoko</name>
+    <url type="homepage">https://home.astoko.xyz</url>
+    <email>contact@astoko.xyz</email>
+  </developer>
+
 
   <supports>
     <control>pointing</control>
@@ -41,43 +46,60 @@
   <launchable type="desktop-id">io.github.astoko.ParcelBuddy.desktop</launchable>
 
   <screenshots>
-    <screenshot>
-      <image>https://github.com/astoko/ParcelBuddy/blob/main/screenshots/overview.png?raw=true</image>
-      <caption>Parcel Buddy Dashboard Overview</caption>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/astoko/ParcelBuddy/main/screenshots/noparcels.png</image>
+      <caption>No Parcels Found</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/astoko/ParcelBuddy/blob/main/screenshots/integrates.png?raw=true</image>
-      <caption>Parcel Buddy Notification</caption>
+      <image>https://raw.githubusercontent.com/astoko/ParcelBuddy/main/screenshots/overview.png</image>
+      <caption>Parcel Tracking Example</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/astoko/ParcelBuddy/blob/main/screenshots/selfhostable.png?raw=true</image>
-      <caption>Parcel Buddy Self-hostable Solution</caption>
+      <image>https://raw.githubusercontent.com/astoko/ParcelBuddy/main/screenshots/details.png</image>
+      <caption>Details of Tracked Parcel</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/astoko/ParcelBuddy/blob/main/screenshots/timeline.png?raw=true</image>
+      <image>https://raw.githubusercontent.com/astoko/ParcelBuddy/main/screenshots/details.png</image>
       <caption>Parcel Buddy Timeline Example</caption>
     </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/astoko/ParcelBuddy/main/screenshots/onboarding.png</image>
+      <caption>Parcel Buddy Onboarding</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/astoko/ParcelBuddy/main/screenshots/loading.png</image>
+      <caption>Parcel Buddy Onboarding</caption>
+    </screenshot>
   </screenshots>
-  
+
   <content_rating type="oars-1.1" />
 
   <releases>
-  <release version="0.1.0" date="">
-    <url type="details">https://github.com/astoko/ParcelBuddy/commits/v0.1.0</url>
-    <description>
-      <p>Release description</p>
+    <release version="0.1.1" date="2025-09-14">
+      <url type="details">https://github.com/astoko/ParcelBuddy/commits/v0.1.1</url>
+      <description>
+        <p>Safer, Better Handeling to File Permissions</p>
+        <ul>
+          <li>Flatpak File is now categorized as "Potentianly Safe" from "Potentianly Unsafe"</li>
+          <li>Flatpak is updated to follow better the requiremnets and guidelines of flathub for future submission.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.0" date="2025-09-14">
+      <url type="details">https://github.com/astoko/ParcelBuddy/commits/v0.1.0</url>
+      <description>
+        <p>Early public release of Parcel Buddy</p>
         <ul>
           <li>First Release of Parcel Buddy</li>
           <li>Hiya! :3</li>
         </ul>
-    </description>
-  </release>
-</releases>
+      </description>
+    </release>
+  </releases>
 
   <categories>
     <category>Utility</category>
     <category>Network</category>
-    <category>Productivity</category>
   </categories>
 
   <keywords>
