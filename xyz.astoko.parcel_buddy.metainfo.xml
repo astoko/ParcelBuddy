@@ -1,0 +1,74 @@
+<component type="desktop-application">
+  <id>xyz.astoko.parcel_buddy</id>
+
+  <name>Parcel Buddy</name>
+  <icon type="stock">xyz.astoko.parcel_buddy</icon>
+  <summary>Track parcels easily from multiple carriers</summary>
+
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+
+  <url type="homepage">https://home.astoko.xyz</url>
+  <url type="contribute">https://home.astoko.xyz</url>
+  <url type="contact">https://home.astoko.xyz</url>
+  <developer_name>Astoko</developer_name>
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </supports>
+
+  <description>
+    <p>
+      Parcel Buddy lets you track parcels from a wide range of carriers with a clean, visual interface.
+      Get real-time updates and notifications for your packages, all in one place.
+    </p>
+    <p>Features include:</p>
+    <ul>
+      <li>Support for multiple carriers</li>
+      <li>Real-time tracking updates</li>
+      <li>Custom notifications for delivery status changes</li>
+      <li>Self-hostable solution for privacy-conscious users</li>
+      <li>Intuitive and user-friendly interface</li>
+    </ul>
+    <p>
+      Parcel Buddy makes it easy to stay on top of your deliveries.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">xyz.astoko.parcel_buddy.desktop</launchable>
+
+  <screenshots>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/astoko/parcelapp/main/screenshots/overview.png</image>
+      <caption>Parcel Buddy Dashboard Overview</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/astoko/parcelapp/main/screenshots/integrates.png</image>
+      <caption>Parcel Buddy Notification</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/astoko/parcelapp/main/screenshots/selfhostable.png</image>
+      <caption>Parcel Buddy Self-hostable Solution</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/astoko/parcelapp/main/screenshots/timeline.png</image>
+      <caption>Parcel Buddy Timeline Example</caption>
+    </screenshot>
+  </screenshots>
+  
+  <content_rating type="oars-1.1" />
+
+  <categories>
+    <category>Utility</category>
+    <category>Network</category>
+    <category>Productivity</category>
+  </categories>
+
+  <keywords>
+    <keyword>Parcel</keyword>
+    <keyword>Tracking</keyword>
+    <keyword>Packages</keyword>
+  </keywords>
+</component>

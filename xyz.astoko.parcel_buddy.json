@@ -1,0 +1,110 @@
+{
+  "app-id": "xyz.astoko.parcel_buddy",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "48",
+  "sdk": "org.gnome.Sdk",
+  "command": "parcelapp",
+  "finish-args": [
+    "--share=network",
+    "--share=ipc",
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--device=dri",
+    "--filesystem=home",
+    "--socket=session-bus",
+    "--talk-name=org.freedesktop.Notifications"
+  ],
+  "modules": [
+    {
+      "name": "parcelapp",
+      "buildsystem": "simple",
+      "sources": [
+        {
+          "type": "dir",
+          "path": "."
+        }
+      ],
+      "build-commands": [
+        "install -D main.py /app/main.py",
+        "install -D .env /app/.env",
+        "install -D parcelapp-wrapper.sh /app/bin/parcelapp",
+        "chmod +x /app/bin/parcelapp",
+        "install -D xyz.astoko.parcel_buddy.desktop /app/share/applications/xyz.astoko.parcel_buddy.desktop",
+        "install -D parcelapp.png /app/share/icons/hicolor/128x128/apps/xyz.astoko.parcel_buddy.png",
+        "install -D requirements.txt /app/requirements.txt",
+        "mkdir -p /app/share/parcelapp/icons",
+        "cp -r icons/* /app/share/parcelapp/icons/",
+        "mkdir -p /app/share/parcelapp/screenshots",
+        "cp -r screenshots/* /app/share/parcelapp/screenshots/"
+    ]
+
+    },
+    {
+    "name": "python3-requests",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"requests\" --no-build-isolation"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/e5/48/1549795ba7742c948d2ad169c1c8cdbae65bc450d6cd753d124b17c8cd32/certifi-2025.8.3-py3-none-any.whl",
+            "sha256": "f6c12493cfb1b06ba2ff328595af9350c65d6644968e5d3a2ffd78699af217a5"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/83/2d/5fd176ceb9b2fc619e63405525573493ca23441330fcdaee6bef9460e924/charset_normalizer-3.4.3.tar.gz",
+            "sha256": "6fce4b8500244f6fcb71465d4a4930d132ba9ab8e71a7859e6a5d59851068d14"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/76/c6/c88e154df9c4e1a2a66ccf0005a88dfb2650c1dffb6f5ce603dfbd452ce3/idna-3.10-py3-none-any.whl",
+            "sha256": "946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/1e/db/4254e3eabe8020b458f1a747140d32277ec7a271daf1d235b70dc0b4e6e3/requests-2.32.5-py3-none-any.whl",
+            "sha256": "2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/a7/c2/fe1e52489ae3122415c51f387e221dd0773709bad6c6cdaa599e8a2c5185/urllib3-2.5.0-py3-none-any.whl",
+            "sha256": "e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc"
+        }
+    ]
+    },
+    {
+        "name": "python3-dotenv",
+        "buildsystem": "simple",
+        "build-commands": [
+            "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"dotenv\" --no-build-isolation"
+        ],
+        "sources": [
+            {
+                "type": "file",
+                "url": "https://files.pythonhosted.org/packages/b2/b7/545d2c10c1fc15e48653c91efde329a790f2eecfbbf2bd16003b5db2bab0/dotenv-0.9.9-py2.py3-none-any.whl",
+                "sha256": "29cf74a087b31dafdb5a446b6d7e11cbce8ed2741540e2339c69fbef92c94ce9"
+            },
+            {
+                "type": "file",
+                "url": "https://files.pythonhosted.org/packages/5f/ed/539768cf28c661b5b068d66d96a2f155c4971a5d55684a514c1a0e0dec2f/python_dotenv-1.1.1-py3-none-any.whl",
+                "sha256": "31f23644fe2602f88ff55e1f5c79ba497e01224ee7737937930c448e4d0e24dc"
+            }
+        ]
+    },
+    {
+    "name": "appdata",
+    "buildsystem": "simple",
+    "build-commands": [
+      "install -D xyz.astoko.parcel_buddy.metainfo.xml /app/share/metainfo/xyz.astoko.parcel_buddy.metainfo.xml"
+    ],
+    "sources": [
+      {
+        "type": "file",
+        "path": "xyz.astoko.parcel_buddy.metainfo.xml"
+      }
+    ]
+  }
+
+  ]
+}
