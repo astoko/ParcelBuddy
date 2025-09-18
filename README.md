@@ -25,7 +25,7 @@ Coming Soon... Hopefully
 
 ### Manual Flatpak Installation from Releases
 
-1. Go to the [Releases](https://github.com/your-username/parcelbuddy/releases) page.  
+1. Go to the [Releases](https://github.com/astoko/parcelbuddy/releases) page.  
 2. Download the latest `ParcelBuddy.flatpak` file.  
 3. Open a terminal and install the Flatpak:
 
